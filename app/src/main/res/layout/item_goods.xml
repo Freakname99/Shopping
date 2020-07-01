@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@drawable/body_cont_bg"
+    android:layout_margin="5dp">
+
+    <ImageView
+        android:id="@+id/iv_item_goodspic"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/goodsdef"/>
+    <TextView
+        android:id="@+id/tv_item_goods_title"
+        android:layout_toRightOf="@+id/iv_item_goodspic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:text="百味草 年货牛肉干 100g/袋"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_item_goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="￥16"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/iv_item_goodspic"
+        android:layout_below="@+id/tv_item_goods_title"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/delete"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:visibility="gone"/>
+</RelativeLayout>

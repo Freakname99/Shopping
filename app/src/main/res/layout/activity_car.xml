@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CarActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/top_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="购物车"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/item_grid_header_arrow_icon" />
+
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_blue"
+            android:layout_centerVertical="true"
+            android:text="编辑"
+            android:textSize="18sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_car"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top"
+        android:layout_above="@+id/rl_bottom"/>
+
+    <ImageView
+        android:id="@+id/iv_emptycar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shoppingcar"
+        android:layout_below="@+id/rl_top"
+        android:layout_above="@+id/rl_bottom"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <CheckBox
+            android:id="@+id/cb_all_check"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全选"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/tv_allprice"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合计：0.00"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_pay"
+            android:textColor="@android:color/holo_red_dark"/>
+
+        <Button
+            android:id="@+id/btn_pay"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_red"
+            android:textColor="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:text="结算(0)"/>
+    </RelativeLayout>
+
+</RelativeLayout>
